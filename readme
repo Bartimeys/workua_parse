@@ -1,0 +1,32 @@
+1)Создаем виртуальное окружение:
+    Windows:
+    $ python3 -m venv env
+
+    Linux and OS X:
+
+    $ python3 -m venv env
+
+ ПРИМЕЧАНИЕ: если создание виртуального окружения данной командой на Ubuntu 14.04/16.04 приведет к ошибке то нужно использовать такие команды:
+
+$ sudo apt-get install python-virtualenv
+$ virtualenv --python=python3.5 env
+
+2)активируем виртуальное окружение
+    Windows:
+    $ env\Scripts\activate
+
+    Linux and OS X:
+
+    $ source env/bin/activate
+
+ПРИМЕЧАНИЕ: иногда команда source может быть недоступна. В таком случае, мы используем такую команду:
+
+    $ . env/bin/activate
+
+
+3) pip install -r requirements.txt
+
+4)Запускаем наш спайдер через таскфлоу, скрипт отрабатывает и складывает даные в sqlite (логи складывает в файл fleur.log):
+    python run.py
+5)Експортируем даные в с базы в каталог:
+    python export.py
